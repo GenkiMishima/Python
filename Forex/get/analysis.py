@@ -9,6 +9,7 @@ import locale
 import time
 
 while 1:
+	#TimeSetting
 	d = datetime.datetime.today()
 	date = str(d.year).zfill(4)+str(d.month).zfill(2)+str(d.day).zfill(2)+str(d.hour).zfill(2)+str(d.minute).zfill(2)+str(d.second).zfill(2)
 	MOD = str(d.hour*60+d.minute)
@@ -20,7 +21,7 @@ while 1:
 	f.write(str(d.hour).zfill(2)+str(d.minute).zfill(2)+str(d.second).zfill(2))
 	f.write('\n')
 	f.close()
-	
+	#HTMLSetting
 	parsed = parse(urlopen('http://www.x-rates.com/table/?from=USD&amount=1.00'))
 	doc = parsed.getroot()
 	
